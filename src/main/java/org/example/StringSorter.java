@@ -13,11 +13,11 @@ public class StringSorter {
         List<String> doesNotStartWithPrefix = new ArrayList<>();
         List<String> startsWithPrefix = new ArrayList<>();
 
-        for (int i = 0; i < unsortedStrings.size(); i++) {
-            if (unsortedStrings.get(i).startsWith(exceptionChar)) {
-                startsWithPrefix.add(unsortedStrings.get(i));
+        for (String unsortedString : unsortedStrings) {
+            if (unsortedString.startsWith(exceptionChar)) {
+                startsWithPrefix.add(unsortedString);
             } else {
-                doesNotStartWithPrefix.add(unsortedStrings.get(i));
+                doesNotStartWithPrefix.add(unsortedString);
             }
         }
 
